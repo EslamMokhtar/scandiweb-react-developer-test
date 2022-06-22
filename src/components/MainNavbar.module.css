@@ -1,0 +1,171 @@
+.header {
+  width: 100%;
+  height: 5rem;
+}
+nav {
+  z-index: 2;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px;
+  height: 81px;
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
+}
+.modal {
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+.links {
+  height: auto;
+}
+.links li {
+  list-style-type: none;
+  display: inline-block;
+  padding-right: 30px;
+}
+
+.linkItem {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.links a:hover,
+.links a:active,
+.activeLink {
+  color: #5ece7b;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.4s ease-out;
+  border-bottom: 2px solid #5ece7b;
+  padding-bottom: 20px;
+}
+.overlayDrop {
+  height: 100%;
+  width: 100%;
+}
+.shopping {
+  margin-left: 30px;
+  cursor: pointer;
+  position: relative;
+}
+.chevron {
+  margin-left: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.navIcons {
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  width: 11.5%;
+  align-items: center;
+}
+.dropdownContent {
+  animation: slideDown .3s;
+  margin: 0;
+  position: absolute;
+  width: 140px;
+  max-height: 193px;
+  overflow: auto;
+  right: 125px;
+  top: 6%;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+  cursor: pointer;
+  list-style-type: none;
+}
+
+.dropdownContent.close,
+.modal.close {
+  display: none;
+}
+.dropdownContent li {
+  padding: 15px;
+  margin: 4px 0px;
+}
+.dropdownContent li:hover,
+.selectedCurrency {
+  background-color: #ddd;
+  border-radius: 10px;
+}
+.badge {
+  font-family: Roboto;
+  position: absolute;
+  left: 11px;
+  bottom: 10px;
+  background-color: black;
+  color: #fff;
+  font-size: 70%;
+  border-radius: 10em;
+  min-width: 1.8em;
+  padding: 0.25em;
+  text-align: center;
+  transition: all 0.4s;
+}
+.animate {
+  transform: scale(1.5);
+  background-color: red;
+}
+
+.currencyDropdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.currencyDropdown h4 {
+  font-weight: normal;
+}
+.chevron h3 {
+  margin-right: 5px;
+}
+@media only screen and (max-width: 550px) {
+  nav {
+    padding: 0 20px;
+  }
+  .links li {
+    padding-right: 15px;
+  }
+  .dropdownContent {
+    right: 65px;
+    top: 7%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .navIcons {
+    width: auto;
+  }
+}
+@keyframes slideDown {
+  0% {
+    height: 40px;
+  }
+  20% {
+    height: 80px;
+  }
+  40% {
+    height: 120px;
+  }
+  60% {
+    height: 160px;
+  }
+  80% {
+    height: 180px;
+  }
+  100% {
+    height: 193px;
+  }
+}

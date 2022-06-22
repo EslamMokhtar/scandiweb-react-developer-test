@@ -1,0 +1,149 @@
+.profile {
+  border-radius: 8px;
+  width: 70%;
+  object-fit: cover;
+}
+.leftItems {
+  padding-left: 0px;
+  flex-direction: column;
+  display: flex;
+  font-weight: lighter;
+  list-style-type: none;
+  justify-content: space-between;
+}
+.column {
+  float: left;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  margin: auto;
+}
+
+.cartItem {
+  width: 98%;
+  height: 195px;
+  margin-bottom: 20px;
+  padding-top: 8px;
+  border-top: solid #e5e5e5 1.5px;
+}
+.addButtons button:hover {
+  transition: 0.5s ease;
+  background-color: black;
+  color: white;
+}
+
+.addButtons button {
+  text-decoration: none;
+  text-align: center;
+  background-color: white;
+  color: black;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 5px;
+  border: 2px solid black;
+  margin-right: 9px;
+  cursor: pointer;
+}
+.attributeButton {
+  width: auto;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  padding: 2px;
+  font-size: 11px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.colorButtonGroup {
+  height: 17px;
+  width: 17px;
+
+  margin-right: 5px;
+  border: none;
+  transition: all 0.3s;
+  border-radius: 5px;
+  box-shadow: 1px 2px 3px grey;
+}
+.attributeButton.selected {
+  color: white;
+  background-color: black;
+}
+
+.colorButtonGroup.colorSelected {
+  border-radius: 50%;
+}
+
+.addButtons {
+  display: flex;
+  width: 30%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+}
+.slideUp {
+  animation: slideUp 0.5s linear;
+  transition: 0.5s ease-in-out;
+}
+
+.slideDown {
+  animation: slideDown 0.5s linear;
+  transition: 0.5s ease-in-out;
+}
+.quantity {
+  overflow: hidden;
+}
+
+.quantity p {
+  margin-right: 9px;
+}
+.priceText {
+  margin: 10px 0;
+}
+.attributeName {
+  font-size: small;
+  font-weight: bold;
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(25px);
+  }
+  20% {
+    transform: translateY(20px);
+  }
+  40% {
+    transform: translateY(15px);
+  }
+  60% {
+    transform: translateY(10px);
+  }
+  80% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes slideDown {
+  0% {
+    transform: translateY(-25px);
+  }
+  20% {
+    transform: translateY(-20px);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+  80% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

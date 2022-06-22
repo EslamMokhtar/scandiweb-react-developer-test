@@ -1,0 +1,175 @@
+.container {
+  width: 80%;
+  display: flex;
+  margin: auto;
+  padding-top: 100px;
+  justify-content: center;
+}
+.imageGroup {
+  display: grid;
+  padding-right: 5px;
+  overflow: auto;
+  height: 500px;
+}
+.imageGroup img {
+  object-fit: cover;
+  height: 100px;
+  width: 100px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  transition: opacity 0.4s ease-in-out;
+}
+.imageGroup img:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+.selected {
+  border: 3px solid #5ece7b;
+}
+.leftColumn {
+  display: flex;
+}
+
+.rightColumn {
+  display: grid;
+  height: 680px;
+}
+.bigImage img {
+  object-fit: contain;
+  height: 500px;
+  max-width: 500px;
+  border-radius: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.hide {
+  display: none;
+}
+
+.addButton button {
+  position: relative;
+  height: 65px;
+  transition: 0.5s ease;
+  background-color: #5ece7b;
+  color: white;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-size: large;
+  cursor: pointer;
+  padding: 20px 0;
+  text-decoration: none;
+  border: 2px solid #5ece7b;
+  width: 200px;
+  overflow: hidden;
+}
+.addButton button:hover {
+  background-color: white;
+  color: #5ece7b;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+.bigImage {
+  width: 600px;
+  display: flex;
+  justify-content: center;
+}
+.description {
+  width: 25vw;
+  height: 250px;
+  overflow: auto;
+  font-family: Roboto;
+}
+
+.addButtonText {
+  transition: transform 1s;
+}
+.icon {
+  transition: transform 1s;
+  transform: translateY(-500%);
+}
+
+.addButtonText.addedToCart {
+  transform: translateY(500%);
+}
+.icon.addedToCart {
+  transform: translateY(-80%);
+}
+.productNameText {
+  font-weight: lighter;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .container {
+    width: 90%;
+  }
+  .leftColumn {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .rightColumn {
+    text-align: center;
+    line-height: 50px;
+  }
+  .bigImage img {
+    max-height: 70%;
+    margin-left: 30px;
+    max-width: 85%;
+  }
+  .imageGroup {
+    width: 100px;
+    height: 500px;
+  }
+  .bigImage {
+    display: grid;
+    align-items: center;
+  }
+  .addButton button {
+    width: 70%;
+  }
+  .imageGroup img {
+    width: 70px;
+    height: 70px;
+  }
+  .container {
+    display: block;
+  }
+  .description {
+    width: 100%;
+  }
+}
+.attributeName {
+  text-transform: uppercase;
+  margin-top: 5px;
+  font-family: "Roboto Condensed";
+  font-size: 18px;
+}
+.priceText h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+@media only screen and (max-width: 620px) {
+  .imageGroup {
+    width: 200px;
+  }
+}
