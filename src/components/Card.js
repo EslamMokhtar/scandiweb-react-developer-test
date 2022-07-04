@@ -41,7 +41,7 @@ class Card extends Component {
       showAttributes: false,
       isHovering: false,
       clicked: false,
-      attributes: []
+      attributes: [],
     }));
   }
 

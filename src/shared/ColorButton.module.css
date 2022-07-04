@@ -1,0 +1,42 @@
+.colorButtonGroup {
+  height: 25px;
+  width: 25px;
+  margin-right: 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px grey;
+}
+.colorButtonGroup:hover,
+.none:hover {
+  transform: scale(1.2);
+}
+
+.colorButtonGroup.colorSelected {
+  border-radius: 50%;
+}
+
+.attributeUnit {
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 35px;
+}
+
+.attributeName {
+  font-weight: lighter;
+  font-size: 1.2em;
+}
+.none {
+  color: red;
+  height: 25px;
+  width: 25px;
+  margin-right: 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px grey;
+}

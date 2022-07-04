@@ -16,9 +16,14 @@ class App extends Component {
           <Route path="/" exact>
             <Redirect to="all" />
           </Route>
-          <Route path="/all" exact>
-            <Home />
-          </Route>
+          <Route
+            path="/all"
+            exact
+            render={({ location, history }) => (
+              <Home location={location} history={history} />
+            )}
+          />
+
           <Route path="/cart">
             <Cart />
           </Route>
@@ -29,10 +34,16 @@ class App extends Component {
           <Route
             exact
             path="/:cid"
-            render={({ match }) => <Category cid={match.params.cid} />}
+            render={({ match, location, history }) => (
+              <Category
+                cid={match.params.cid}
+                location={location}
+                history={history}
+              />
+            )}
           />
           <Route path="*">
-            <Error message="Page not found !!"/>
+            <Error message="Page not found !!" />
           </Route>
         </Switch>
       </>

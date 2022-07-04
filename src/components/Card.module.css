@@ -93,7 +93,7 @@
 }
 
 .card:hover .addButton {
-  right: 0;
+  right: 10px;
   visibility: visible;
 }
 
@@ -141,7 +141,7 @@
 .icon3.addedToCart {
   transform: translate(-50%, -50%);
 }
-@media only screen and (max-width: 1150px) {
+@media only screen and (max-width: 1350px) {
   .column {
     width: 50%;
     display: flex;
@@ -149,7 +149,7 @@
     margin-bottom: 20px;
   }
 }
-@media only screen and (max-width: 765px) {
+@media only screen and (max-width: 950px) {
   .column {
     width: 100%;
     display: flex;
@@ -157,11 +157,11 @@
     margin-bottom: 20px;
   }
 }
-@keyframes slideInFromLeft {
+/* @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);
   }
   100% {
     transform: translateX(0);
   }
-}
+} */
